@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nominas>
+  <nomina>
+      <trabajador>
+        <nombreTrabajador>Marcos</nombreTrabajador>
+        <dni>43479992X</dni>
+      </trabajador>
+      <empresa>
+        <cif>F08139712</cif>
+        <nombreEmpresa>CIDE</nombreEmpresa>
+      </empresa>
+      <percepciones>
+        <salario_base>1000.25</salario_base>
+        <antiguedad>333.33333333333337</antiguedad>
+        <horas_extra>420.0</horas_extra>
+        <horas_extraFM>225.0</horas_extraFM>
+      </percepciones>
+      <total_meritado>1978.58</total_meritado>
+      <deducciones>
+        <contingencias_comunes>50.0125</contingencias_comunes>
+        <desempleo>142.025</desempleo>
+        <formacion>71.0125</formacion>
+        <deducciones_horas_extra>42.0</deducciones_horas_extra>
+        <deducciones_horas_extraFM>27.0</deducciones_horas_extraFM>
+        <irpf>474.86</irpf>
+      </deducciones> 
+      <salario_final>1171.67</salario_final>
+  </nomina>
+</nominas>

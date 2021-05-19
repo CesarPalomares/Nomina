@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nominas>
+  <nomina>
+      <trabajador>
+        <nombreTrabajador>Cesar</nombreTrabajador>
+        <dni>43464223L</dni>
+      </trabajador>
+      <empresa>
+        <cif>F08139712</cif>
+        <nombreEmpresa>CIDE</nombreEmpresa>
+      </empresa>
+      <percepciones>
+        <salario_base>1000.25</salario_base>
+        <antiguedad>133.33333333333331</antiguedad>
+        <horas_extra>200.0</horas_extra>
+        <horas_extraFM>275.0</horas_extraFM>
+      </percepciones>
+      <total_meritado>1608.58</total_meritado>
+      <deducciones>
+        <contingencias_comunes>50.0125</contingencias_comunes>
+        <desempleo>120.025</desempleo>
+        <formacion>60.0125</formacion>
+        <deducciones_horas_extra>20.0</deducciones_horas_extra>
+        <deducciones_horas_extraFM>33.0</deducciones_horas_extraFM>
+        <irpf>160.858</irpf>
+      </deducciones> 
+      <salario_final>1164.67</salario_final>
+  </nomina>
+</nominas>

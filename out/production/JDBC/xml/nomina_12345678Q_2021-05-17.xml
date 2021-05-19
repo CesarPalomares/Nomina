@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nominas>
+  <nomina>
+      <trabajador>
+        <nombreTrabajador>ejemplo</nombreTrabajador>
+        <dni>12345678Q</dni>
+      </trabajador>
+      <empresa>
+        <cif>F08139712</cif>
+        <nombreEmpresa>CIDE</nombreEmpresa>
+      </empresa>
+      <percepciones>
+        <salario_base>1000.25</salario_base>
+        <antiguedad>333.33333333333337</antiguedad>
+        <horas_extra>240.0</horas_extra>
+        <horas_extraFM>325.0</horas_extraFM>
+      </percepciones>
+      <total_meritado>1898.58</total_meritado>
+      <deducciones>
+        <contingencias_comunes>50.0125</contingencias_comunes>
+        <desempleo>124.025</desempleo>
+        <formacion>62.0125</formacion>
+        <deducciones_horas_extra>24.0</deducciones_horas_extra>
+        <deducciones_horas_extraFM>39.0</deducciones_horas_extraFM>
+        <irpf>2544.1</irpf>
+      </deducciones> 
+      <salario_final>-944.57</salario_final>
+  </nomina>
+</nominas>

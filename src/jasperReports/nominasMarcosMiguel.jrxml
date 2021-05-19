@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7d317e23-22a9-4040-9cc0-85f9046b18c7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[select nominas.horas_extra, nominas.horas_extra_fm, nominas.plus_antiguedad, nominas.irpf, nominas.formacion, nominas.desempleo, nominas.deduc_horas_extra,nominas.deduc_horas_extraFM,
+nominas.contingencias_comunes, nominas.salari_base, nominas.total_merital, nominas.salario_final, nominas.idConvenio, nominas.DNItrabajdor,nominas.fecha_actual, nominas.salarioBaseMasHoraExtra, nominas.nombreT, nominas.apellidoT, nominas.puestoT,
+convenio.plusConvenio, convenio.años_antiguedad, trabajador.nombre ,trabajador.apellido, trabajador.apellido2, trabajador.edad, trabajador.puesto,
+trabajador.irpf as IRPFPor,trabajador.fechaInicio, deducciones.desempleo as desempleoPor, deducciones.contingencias_comunes as ContigComunPor, deducciones.formacion as formacionPor, deducciones.horas_extra as HExtraPor, deducciones.horas_extra_fm as HExtraFMPor
+from nominas inner join convenio on nominas.idConvenio = convenio.id inner join trabajador on convenio.id = trabajador.idConvenio 
+inner join deducciones on convenio.id = deducciones.idConvenio order by idNomina desc limit 1]]>
+	</queryString>
+	<field name="horas_extra" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="horas_extra"/>
+		<property name="com.jaspersoft.studio.field.label" value="horas_extra"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horas_extra_fm" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="horas_extra_fm"/>
+		<property name="com.jaspersoft.studio.field.label" value="horas_extra_fm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="plus_antiguedad" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="plus_antiguedad"/>
+		<property name="com.jaspersoft.studio.field.label" value="plus_antiguedad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="irpf" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="irpf"/>
+		<property name="com.jaspersoft.studio.field.label" value="irpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="formacion" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="formacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="formacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desempleo" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="desempleo"/>
+		<property name="com.jaspersoft.studio.field.label" value="desempleo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deduc_horas_extra" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="deduc_horas_extra"/>
+		<property name="com.jaspersoft.studio.field.label" value="deduc_horas_extra"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deduc_horas_extraFM" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="deduc_horas_extraFM"/>
+		<property name="com.jaspersoft.studio.field.label" value="deduc_horas_extraFM"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contingencias_comunes" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="contingencias_comunes"/>
+		<property name="com.jaspersoft.studio.field.label" value="contingencias_comunes"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salari_base" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="salari_base"/>
+		<property name="com.jaspersoft.studio.field.label" value="salari_base"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_merital" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="total_merital"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_merital"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salario_final" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="salario_final"/>
+		<property name="com.jaspersoft.studio.field.label" value="salario_final"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idConvenio" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idConvenio"/>
+		<property name="com.jaspersoft.studio.field.label" value="idConvenio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DNItrabajdor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DNItrabajdor"/>
+		<property name="com.jaspersoft.studio.field.label" value="DNItrabajdor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_actual" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_actual"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_actual"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salarioBaseMasHoraExtra" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="salarioBaseMasHoraExtra"/>
+		<property name="com.jaspersoft.studio.field.label" value="salarioBaseMasHoraExtra"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombreT"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombreT"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidoT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellidoT"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellidoT"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="puestoT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="puestoT"/>
+		<property name="com.jaspersoft.studio.field.label" value="puestoT"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="nominas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="plusConvenio" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="plusConvenio"/>
+		<property name="com.jaspersoft.studio.field.label" value="plusConvenio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="convenio"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="años_antiguedad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="años_antiguedad"/>
+		<property name="com.jaspersoft.studio.field.label" value="años_antiguedad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="convenio"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trabajador"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellido"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellido"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trabajador"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellido2"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellido2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trabajador"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="edad"/>
+		<property name="com.jaspersoft.studio.field.label" value="edad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trabajador"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="puesto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="puesto"/>
+		<property name="com.jaspersoft.studio.field.label" value="puesto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trabajador"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IRPFPor" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="IRPFPor"/>
+		<property name="com.jaspersoft.studio.field.label" value="IRPFPor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trabajador"/>
+	</field>
+	<field name="fechaInicio" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaInicio"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaInicio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trabajador"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desempleoPor" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="desempleoPor"/>
+		<property name="com.jaspersoft.studio.field.label" value="desempleoPor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deducciones"/>
+	</field>
+	<field name="ContigComunPor" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="ContigComunPor"/>
+		<property name="com.jaspersoft.studio.field.label" value="ContigComunPor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deducciones"/>
+	</field>
+	<field name="formacionPor" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="formacionPor"/>
+		<property name="com.jaspersoft.studio.field.label" value="formacionPor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deducciones"/>
+	</field>
+	<field name="HExtraPor" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="HExtraPor"/>
+		<property name="com.jaspersoft.studio.field.label" value="HExtraPor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deducciones"/>
+	</field>
+	<field name="HExtraFMPor" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="HExtraFMPor"/>
+		<property name="com.jaspersoft.studio.field.label" value="HExtraFMPor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="deducciones"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="120" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="0" y="-10" width="270" height="100" uuid="7cef4c44-d87b-4abb-a701-ef204f9339f2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="" x="0" y="-10" width="80" height="20" uuid="b6331a9b-6675-4b31-9b24-1cbf7337aecb"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="80" height="20" uuid="429a9871-1bd7-4330-ba5d-57fdbe9e936e"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Domicilio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="80" height="20" uuid="fa7bd0b3-1ea7-419e-a2f4-99d19fc7c631"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Localidad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="80" height="20" uuid="60437d96-18af-403e-92d9-24883fed806a"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[CIF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="80" height="20" uuid="d69f2e85-26f7-459d-962a-ac28af3748ba"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[CCC a la SS:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="290" y="-10" width="265" height="100" uuid="e4a40583-edee-4d23-8ea5-8537e3f8a06a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="290" y="-10" width="80" height="20" uuid="86d6bffe-52dd-4d41-8d2c-2252b6aa8ac9"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Trabajador:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="10" width="80" height="20" uuid="4eb04c00-2330-40cc-bf5f-b50be1941d7f"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Apellido:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="30" width="80" height="20" uuid="18da1748-50e5-488e-9d51-ff51f067096d"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[NIF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="50" width="80" height="20" uuid="ac2e69ff-7b1b-4a8f-89c8-c5d9fa54ce37"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Grupo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="-10" width="80" height="20" uuid="8fa433e4-12b9-4c23-b686-a71b2b0fbbac"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[CIDE SL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="10" width="80" height="20" uuid="94c5b760-a8c6-4a2f-8500-d4071f5f3114"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Palma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="30" width="80" height="20" uuid="3d933abb-853c-4d54-81d7-de4a4df15a35"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Palma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="50" width="80" height="20" uuid="0f4af1bb-c5d0-40c3-a35d-90de9919b00b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[F08139712]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="70" width="80" height="20" uuid="f7617f40-24c1-4460-97f8-d259bfcec929"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[1111111111]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="452" y="10" width="98" height="20" uuid="411635aa-99f4-4eca-bed3-13519ac7c8a0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidoT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="30" width="100" height="20" uuid="19fe1d21-c234-4d28-a298-1d4258908573"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DNItrabajdor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="50" width="100" height="20" uuid="80b43555-566a-473d-93f9-93fbf084c7e0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puestoT}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="100" width="555" height="20" uuid="e0fe40d2-e979-4d5d-9402-642498222da5">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<textField pattern="M/d/yy">
+				<reportElement x="200" y="105" width="81" height="10" uuid="95312f12-88d5-4562-afda-7e23e6cb179f"/>
+				<textFieldExpression><![CDATA[$F{fecha_actual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="-10" width="100" height="20" uuid="1c6d11a0-b511-4305-b0a5-fab0bf4b5943"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="645" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="-1" y="-31" width="555" height="675" forecolor="#000000" uuid="8418d003-8bca-4278-85f8-316c06c12abc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="0" width="20" height="21" uuid="df6125d2-45ab-44cd-bf69-b811bf0af899"/>
+				<box topPadding="2" leftPadding="10"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[I. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="21" width="150" height="19" uuid="b98a3b46-89d3-4f49-ba26-9409bb6363d7"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[1.- Percepciones Salariales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="21" width="140" height="19" forecolor="rgba(0, 0, 0, 0.7058824)" uuid="66723549-d1f7-4bb1-b76e-8dd45f363b6c"/>
+				<box topPadding="2" leftPadding="0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[(Sujetas a cotización)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="0" width="90" height="21" uuid="047a55a8-ae62-4346-88dc-fba58aa73a01"/>
+				<box topPadding="2" leftPadding="10"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEVENGOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="464" y="0" width="81" height="21" uuid="7912d407-2d69-4cb8-b9dd-a96135706b95"/>
+				<box topPadding="2" leftPadding="10"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[TOTALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="80" height="21" forecolor="rgba(0, 0, 0, 0.7058824)" uuid="c0fafbaf-0f68-48e9-b2f0-d9276ff75d41"/>
+				<box topPadding="2" leftPadding="10"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[IMPORTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="40" width="340" height="20" forecolor="#000000" uuid="abe52df7-9ba2-483d-bb65-f53e31ad5184">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Salario Base]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="59" width="340" height="21" forecolor="#000000" uuid="367b311f-e059-4753-ba88-71510ce11674">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Horas Extraordinarias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="80" width="340" height="20" forecolor="#000000" uuid="ffedd186-9465-480b-935c-421081d1dbdd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Horas Extraordinarias  por Fuerza Mayor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="100" width="340" height="20" forecolor="#000000" uuid="1c4219ac-1ae5-4172-a9f5-802b6e54f6fb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Antigüedad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="130" width="340" height="28" uuid="bb5252e4-5aa8-4ecc-a195-ddc41fc453ad"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[A.- TOTAL MERITADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="170" width="26" height="21" uuid="cba1a686-cafb-4ed1-a891-0bd4f4ce10aa"/>
+				<box topPadding="2" leftPadding="10"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[II. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="168" width="90" height="24" uuid="ca2e590b-625a-4c8f-a4a1-3663324d1679"/>
+				<box topPadding="2" leftPadding="10"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEDUCCIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="199" width="430" height="20" forecolor="#000000" uuid="89ffca22-b737-41bd-bcbb-21f4f79371c7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[1. Aportaciones del trabajador a las cotizaciones a la S.S. Y conceptos de recaudación conjunta:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="219" width="185" height="20" forecolor="#000000" uuid="5d1b48da-936d-4ab3-919e-cbc2b35db06c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Contingencias Comunes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="239" width="185" height="20" forecolor="#000000" uuid="c9f95030-b563-4e67-8805-dd669352a5a8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Desempleo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="258" width="185" height="22" forecolor="#000000" uuid="c5bff645-d1ad-4c15-8814-703b4ba3e13e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Formación Profesional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="280" width="185" height="20" forecolor="#000000" uuid="e4f3319d-7888-46a3-8847-afd77fbd9516">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Horas Extraordinarias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="300" width="185" height="20" forecolor="#000000" uuid="e6cea03f-6dda-4382-b4c1-4bd79b7c5993">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Horas Extraordinarias  por Fuerza Mayor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="219" width="28" height="20" forecolor="#000000" uuid="2ba57bac-fd09-4c81-9e2b-b9df72371aa3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="239" width="28" height="20" forecolor="#000000" uuid="74fe8f5a-d17a-4713-a1e4-da5dcc2f3819">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="260" width="26" height="18" forecolor="#000000" uuid="8450f903-857b-4bd5-88ca-afa51ba46877">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="321" width="350" height="26" forecolor="rgba(0, 0, 0, 0.7058824)" uuid="1e91f9f0-3d80-4b6d-9442-b69be4a6d83a"/>
+				<box topPadding="2" leftPadding="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TOTAL APORTACIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="360" width="240" height="18" forecolor="#000000" uuid="52996142-8305-4cee-ae6e-e823eb4752ee">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[2. Impuesto sobre la Renta de las Personas Físicas (IRPF) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="406" width="115" height="17" uuid="847d229b-e448-44c8-9223-084d1345a57a"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[B.- TOTAL A DEDUCIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="440" width="185" height="17" uuid="acad8847-e846-4d3e-a154-108cd49ad031"/>
+				<box leftPadding="10"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[LIQUIDO TOTAL A PERCIBIR ( A - B )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="540" width="135" height="42" forecolor="rgba(0, 0, 0, 0.7058824)" uuid="71603a24-46fd-421d-8f6d-0647245e509b"/>
+				<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="16" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[COL·LEGI CIDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="544" width="71" height="14" uuid="edc68731-b7a8-40c0-8852-19cf337b3032">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[en]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="360" y="40" width="100" height="20" uuid="81aa7a6f-f553-49a6-a662-f660c1beee50"/>
+				<textFieldExpression><![CDATA[$F{salari_base}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="130" width="64" height="28" uuid="e0aeed56-b0f7-4da6-b208-9fa1c6b161aa"/>
+				<textFieldExpression><![CDATA[$F{total_merital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="219" width="100" height="20" uuid="ec4fcf80-77d3-4f9f-b495-b18d12631856"/>
+				<textFieldExpression><![CDATA[$F{salari_base}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="219" width="30" height="19" uuid="95dc8088-fa77-417c-8b8c-4e24f555ee9a"/>
+				<textFieldExpression><![CDATA[$F{ContigComunPor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="220" width="102" height="19" uuid="c1d7090e-dd9b-412e-8502-03cbdb93f613"/>
+				<textFieldExpression><![CDATA[$F{contingencias_comunes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="239" width="100" height="20" uuid="873e7c5d-370d-4c80-ae46-dfa0c575c75c"/>
+				<textFieldExpression><![CDATA[$F{salarioBaseMasHoraExtra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="240" width="32" height="19" uuid="c806b57c-e6b7-4e44-8cdb-25c82db37c5e"/>
+				<textFieldExpression><![CDATA[$F{desempleoPor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="259" width="100" height="20" uuid="8eb80b80-7d3a-434b-b929-f9866bb92983"/>
+				<textFieldExpression><![CDATA[$F{salarioBaseMasHoraExtra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="260" width="33" height="18" uuid="306ecc18-c556-460d-8bb6-4d92421978f0"/>
+				<textFieldExpression><![CDATA[$F{formacionPor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="240" width="100" height="20" uuid="0df492a7-f7e2-4f1d-aa98-dc5c75ea1788"/>
+				<textFieldExpression><![CDATA[$F{desempleo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="260" width="100" height="18" uuid="03264ec0-4b5e-4654-bd2b-289de55e261a"/>
+				<textFieldExpression><![CDATA[$F{formacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="334" y="277" width="26" height="22" forecolor="#000000" uuid="8be81c9d-fa6a-41fa-9d84-6af3e9faac51">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="299" width="26" height="20" forecolor="#000000" uuid="2a765449-809b-4c32-b4c8-7d96e56e3a95">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="362" y="320" width="82" height="28" uuid="82da2f95-d2bc-4c76-bb7d-3662735b50fe"/>
+				<textFieldExpression><![CDATA[$F{contingencias_comunes}+$F{desempleo}+$F{formacion}+$F{deduc_horas_extra}+$F{deduc_horas_extraFM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="360" width="44" height="18" uuid="9d884951-887f-4f61-8999-fe69ae62e29a"/>
+				<textFieldExpression><![CDATA[$F{total_merital}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="325" y="360" width="26" height="18" forecolor="#000000" uuid="f6d0f7be-b6e5-42b9-b2ee-fc7bb2733283">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="360" width="38" height="18" uuid="26f0c0fa-a3ee-4d87-9a13-a8c2f6a008b7"/>
+				<textFieldExpression><![CDATA[$F{irpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="403" width="100" height="22" uuid="4d266567-2da2-4c8e-bf78-f9b006177b7d"/>
+				<textFieldExpression><![CDATA[$F{contingencias_comunes}+$F{desempleo}+$F{formacion}+$F{deduc_horas_extra}+$F{deduc_horas_extraFM}+$F{irpf}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d/M/yy">
+				<reportElement x="280" y="544" width="103" height="14" uuid="5a6a32c6-1dc0-4e40-8b1e-483c1129e5d6"/>
+				<textFieldExpression><![CDATA[$F{fecha_actual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="440" width="78" height="24" uuid="8916c783-a136-4a09-a3fa-d79b576e86d9"/>
+				<textFieldExpression><![CDATA[$F{salario_final}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="542" width="100" height="18" forecolor="rgba(0, 0, 0, 0.7058824)" uuid="a2219e84-9a3c-4dba-b44c-4d8cf4387b75"/>
+				<box topPadding="2" leftPadding="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" isBold="false" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Recibí]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="544" width="71" height="14" uuid="a59cfa9e-8c2c-4420-8184-b664432d34ac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Palma]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="360" y="60" width="100" height="20" uuid="7b595861-c009-4367-a0ee-30797dcd51f5"/>
+				<textFieldExpression><![CDATA[$F{horas_extra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="80" width="100" height="20" uuid="3337a35e-7c1a-44c3-8927-6d6e137af01e"/>
+				<textFieldExpression><![CDATA[$F{horas_extra_fm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="100" width="100" height="20" uuid="23baaf10-ef71-47ed-925c-06d99b99955e"/>
+				<textFieldExpression><![CDATA[$F{plus_antiguedad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="360" width="30" height="18" uuid="fac648bf-c457-402c-b645-4e6b28ead0e2"/>
+				<textFieldExpression><![CDATA[$F{IRPFPor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="281" width="100" height="18" uuid="e763cfd1-aa14-4246-bdf4-f5acf0fc22a7"/>
+				<textFieldExpression><![CDATA[$F{horas_extra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="279" width="33" height="18" uuid="b14e44f1-22c3-4209-b33f-9758c6e8a5d9"/>
+				<textFieldExpression><![CDATA[$F{HExtraPor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="300" width="33" height="18" uuid="2cba01ec-da71-4e1d-9643-59af225462ed"/>
+				<textFieldExpression><![CDATA[$F{HExtraFMPor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="301" width="96" height="18" uuid="d1ed74fd-b0d3-4c01-bdd3-12a8863c6757"/>
+				<textFieldExpression><![CDATA[$F{horas_extra_fm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="300" width="100" height="18" uuid="387646cc-b3f4-4132-86e3-0797fffa55a3"/>
+				<textFieldExpression><![CDATA[$F{deduc_horas_extraFM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="279" width="100" height="18" uuid="a55ef138-8d19-4a42-8b95-3de8b629c8ca"/>
+				<textFieldExpression><![CDATA[$F{deduc_horas_extra}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</summary>
+</jasperReport>

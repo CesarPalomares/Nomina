@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nominas>
+  <nomina>
+      <trabajador>
+        <nombreTrabajador>Dani</nombreTrabajador>
+        <dni>12198882A</dni>
+      </trabajador>
+      <empresa>
+        <cif>F08139712</cif>
+        <nombreEmpresa>CIDE</nombreEmpresa>
+      </empresa>
+      <percepciones>
+        <salario_base>1000.25</salario_base>
+        <antiguedad>300.0</antiguedad>
+        <horas_extra>480.0</horas_extra>
+        <horas_extraFM>800.0</horas_extraFM>
+      </percepciones>
+      <total_meritado>2580.25</total_meritado>
+      <deducciones>
+        <contingencias_comunes>50.0125</contingencias_comunes>
+        <desempleo>148.025</desempleo>
+        <formacion>74.0125</formacion>
+        <deducciones_horas_extra>48.0</deducciones_horas_extra>
+        <deducciones_horas_extraFM>96.0</deducciones_horas_extraFM>
+        <irpf>25.8025</irpf>
+      </deducciones> 
+      <salario_final>2138.4</salario_final>
+  </nomina>
+</nominas>
