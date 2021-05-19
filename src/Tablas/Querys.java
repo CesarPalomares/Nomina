@@ -19,8 +19,8 @@ import java.util.*;
  * Description:
  **/
 public class Querys {
-    private static final String SQL_SELECT = "SELECT * FROM Trabajador";
-    private static final String SQL_INSERT = "INSERT INTO Trabajador VALUES(?,?,?,?,?,?,?,?,?)";
+    private static final String SQL_SELECT = "SELECT * FROM trabajador";
+    private static final String SQL_INSERT = "INSERT INTO trabajador VALUES(?,?,?,?,?,?,?,?,?)";
     private static final String SQL_SELECT_DNI = "SELECT * FROM Trabajador WHERE DNI_Trabajador = ?";
     Connection conn;
 
